@@ -2,7 +2,6 @@
 
 class PortfolioApp {
   constructor() {
-    this.currentLanguage = localStorage.getItem('portfolio-language') || 'en';
     this.isTerminalOpen = false;
     this.particles = [];
     this.connections = [];
@@ -43,6 +42,7 @@ class PortfolioApp {
       navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
       });
     }
 
@@ -51,7 +51,10 @@ class PortfolioApp {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (navMenu) navMenu.classList.remove('active');
-        if (navToggle) navToggle.classList.remove('active');
+        if (navToggle) {
+          navToggle.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
       });
     });
 
@@ -143,7 +146,10 @@ class PortfolioApp {
     const statNumbers = document.querySelectorAll('.stat-number');
     
     const animateNumber = (element) => {
-      const target = parseInt(element.getAttribute('data-count'));
+      const target = Number(element.getAttribute('data-count'));
+      if (!Number.isFinite(target)) return;
+      const prefix = element.getAttribute('data-prefix') || '';
+      const suffix = element.getAttribute('data-suffix') || '';
       const duration = 2000;
       const increment = target / (duration / 16);
       let current = 0;
@@ -154,7 +160,7 @@ class PortfolioApp {
           current = target;
           clearInterval(timer);
         }
-        element.textContent = Math.floor(current);
+        element.textContent = `${prefix}${Math.floor(current)}${suffix}`;
       }, 16);
     };
 

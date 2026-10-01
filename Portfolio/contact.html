@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFIS IQBAL - Contact</title>
-    <meta name="description" content="Get in touch with Nafis Iqbal, Software Engineer based in Japan.">
+    <title>Contact | Nafis Iqbal</title>
+    <meta name="description" content="Contact Nafis Iqbal for generative AI engineering, LLM evaluation, and software quality work.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -41,12 +41,12 @@
             </div>
             
             <div class="nav-controls">
-                <button class="lang-toggle" id="lang-toggle">
+                <button type="button" class="lang-toggle" id="lang-toggle">
                     <span class="lang-current">EN</span>
                     <span class="lang-separator">/</span>
                     <span class="lang-alt">JP</span>
                 </button>
-                <button class="nav-toggle" id="nav-toggle">
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,39 +57,26 @@
     
     <!-- Main Content -->
     <main class="main-content">
-        <section class="contact-section">
-            <div class="container">
-                <h1 class="section-title glitch-effect" data-en="Get In Touch" data-jp="お問い合わせ">Get In Touch</h1>
-                <p class="section-description" data-en="I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!" data-jp="新しいプロジェクト、創造的なアイデア、またはあなたのビジョンの一部となる機会についていつでも話し合う準備ができています。お気軽にご連絡ください！">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!
-                </p>
-
-                <div class="contact-grid">
-                    <div class="contact-card glass-effect">
-                        <h2 class="card-title" data-en="Professional Profiles" data-jp="プロフェッショナルプロフィール">Professional Profiles</h2>
-                        <div class="contact-links">
-                            <a href="https://linkedin.com/in/nafis-iqbal" target="_blank" class="cta-button primary">
-                                <span class="btn-text">LinkedIn</span>
-                                <span class="btn-glow"></span>
-                            </a>
-                            <a href="https://github.com/nafis2675" target="_blank" class="cta-button secondary">
-                                <span class="btn-text">GitHub</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="contact-card glass-effect">
-                        <h2 class="card-title" data-en="Email Me" data-jp="メールを送る">Email Me</h2>
-                        <p class="email-address" id="email-address" data-email="nafisiqbalw@gmail.com">nafisiqbalw@gmail.com</p>
-                        <button class="cta-button primary small" id="copy-email">
-                            <span class="btn-text" data-en="Copy Email" data-jp="メールをコピー">Copy Email</span>
-                            <span class="btn-glow"></span>
-                        </button>
-                        <span class="copy-feedback" id="copy-feedback" data-en="Copied!" data-jp="コピーしました！"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="contact-section"><div class="container">
+<h1 class="section-title glitch-effect" data-en="Get in touch" data-jp="お問い合わせ">Get in touch</h1>
+<p class="section-description" data-en="Interested in practical AI engineering, evaluation, or software quality? Contact me by email or connect through my public profiles." data-jp="生成AIの実装、評価、ソフトウェア品質についてのご相談は、メールまたは公開プロフィールからご連絡ください。">Interested in practical AI engineering, evaluation, or software quality? Contact me by email or connect through my public profiles.</p>
+<div class="contact-grid">
+<div class="contact-card glass-effect">
+<h2 class="card-title" data-en="Professional profiles" data-jp="公開プロフィール">Professional profiles</h2>
+<div class="contact-links">
+<a href="https://www.linkedin.com/in/nafis-iqbal-12186622a/" target="_blank" rel="noopener noreferrer" class="cta-button primary">LinkedIn</a><a href="https://github.com/nafis2675" target="_blank" rel="noopener noreferrer" class="cta-button secondary">GitHub</a>
+</div>
+</div>
+<div class="contact-card glass-effect">
+<h2 class="card-title" data-en="Email" data-jp="メール">Email</h2>
+<p class="email-address" id="email-address" data-email="nafisiqbalvw@gmail.com">nafisiqbalvw@gmail.com</p>
+<div class="contact-links">
+<a href="mailto:nafisiqbalvw@gmail.com" class="cta-button secondary"><span class="btn-text" data-en="Send email" data-jp="メールを送る">Send email</span></a><button type="button" class="cta-button primary small" id="copy-email"><span class="btn-text" data-en="Copy email" data-jp="メールをコピー">Copy email</span></button>
+</div>
+<span class="copy-feedback" id="copy-feedback" aria-live="polite"></span>
+</div>
+</div>
+</div></section>
         
         <!-- Scroll Down Indicator -->
         <div class="scroll-down-indicator">
@@ -126,19 +113,17 @@
     
     <!-- Terminal Toggle Button -->
     <button class="terminal-toggle" id="terminal-toggle" title="Open Terminal">
-        <span>>_</span>
+        <span>&gt;_</span>
     </button>
     
     <!-- Footer -->
     <footer class="footer glass-effect">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text" data-en="© 2024 Nafis Iqbal - Software Engineer Portfolio. Built with passion and code." data-jp="© 2024 ナフィス・イクバル - ソフトウェアエンジニアポートフォリオ。情熱とコードで構築。">
-                    © 2024 Nafis Iqbal - Software Engineer Portfolio. Built with passion and code.
-                </p>
+                <p class="footer-text" data-en="© 2026 Nafis Iqbal. Generative AI Engineer." data-jp="© 2026 ナフィス・イクバル。生成AIエンジニア。">© 2026 Nafis Iqbal. Generative AI Engineer.</p>
                 <div class="footer-links">
-                    <a href="https://github.com/nafis2675" target="_blank" class="footer-link">GitHub</a>
-                    <a href="https://linkedin.com/in/nafis-iqbal" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/nafis2675" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nafis-iqbal-12186622a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -159,6 +144,7 @@
                 copyEmailButton.addEventListener('click', () => {
                     const email = emailAddressSpan.getAttribute('data-email');
                     navigator.clipboard.writeText(email).then(() => {
+                        copyFeedbackSpan.textContent = document.documentElement.lang === 'ja' ? 'コピーしました' : 'Copied';
                         copyFeedbackSpan.style.opacity = '1';
                         setTimeout(() => {
                             copyFeedbackSpan.style.opacity = '0';

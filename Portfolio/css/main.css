@@ -700,13 +700,17 @@ a:hover {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 64px;
     left: 0;
     right: 0;
-    background: var(--color-glass);
-    backdrop-filter: blur(10px);
+    z-index: 1001;
+    background: var(--color-secondary);
+    border-bottom: 1px solid var(--color-glass-border);
+    box-shadow: var(--shadow-lg);
     flex-direction: column;
     padding: var(--spacing-xl);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
     transform: translateY(-100%);
     opacity: 0;
     transition: var(--transition-normal);
@@ -715,6 +719,10 @@ a:hover {
   .nav-menu.active {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .nav-menu .nav-link {
+    display: block;
   }
   
   .nav-toggle {
@@ -801,8 +809,7 @@ a:hover {
 .projects-section,
 .about-section,
 .experience-section,
-.contact-section,
-.project-detail-section {
+.contact-section {
   padding: var(--spacing-3xl) 0;
 }
 
@@ -1053,52 +1060,6 @@ a:hover {
   transition: opacity 0.3s ease;
   margin-top: var(--spacing-sm);
   display: block;
-}
-
-/* ===== PROJECT DETAIL SECTION ===== */
-.project-detail-section .section-title {
-  margin-bottom: var(--spacing-lg);
-}
-
-.project-meta {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
-
-.project-detail-section .project-description {
-  text-align: left;
-  margin-bottom: var(--spacing-2xl);
-  max-width: 900px;
-}
-
-.project-actions {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-3xl);
-  flex-wrap: wrap;
-}
-
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-3xl);
-}
-
-.project-gallery img,
-.project-gallery iframe {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-glass-border);
-  box-shadow: var(--shadow-md);
-}
-
-.back-button {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
 }
 
 /* ===== SCROLLBAR STYLING ===== */

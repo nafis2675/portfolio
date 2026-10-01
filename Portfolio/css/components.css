@@ -61,7 +61,6 @@
 .project-card {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .project-card::before {

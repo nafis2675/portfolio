@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAFIS IQBAL - Projects</title>
-    <meta name="description" content="Showcasing real AI/ML and software engineering projects by Nafis Iqbal with detailed descriptions">
+    <title>Projects | Nafis Iqbal</title>
+    <meta name="description" content="Selected work in agentic RAG, LLM evaluation, recommendation systems, and public machine learning projects.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -41,12 +41,12 @@
             </div>
             
             <div class="nav-controls">
-                <button class="lang-toggle" id="lang-toggle">
+                <button type="button" class="lang-toggle" id="lang-toggle">
                     <span class="lang-current">EN</span>
                     <span class="lang-separator">/</span>
                     <span class="lang-alt">JP</span>
                 </button>
-                <button class="nav-toggle" id="nav-toggle">
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -57,116 +57,49 @@
     
     <!-- Main Content -->
     <main class="main-content">
-        <section class="projects-section">
-            <div class="container">
-                <h1 class="section-title glitch-effect" data-en="My Projects" data-jp="私のプロジェクト">My Projects</h1>
-                <p class="section-description" data-en="A collection of my AI and Machine Learning projects, showcasing diverse applications and technical expertise." data-jp="私のAIおよび機械学習プロジェクトのコレクション。多様なアプリケーションと技術的専門知識を紹介します。">
-                    A collection of my AI and Machine Learning projects, showcasing diverse applications and technical expertise.
-                </p>
-
-                <div class="projects-grid">
-                    <!-- Project Card 1 -->
-                    <div class="project-card glass-effect" data-project-id="1">
-                        <h3 class="project-title" data-en="AI Program Creation & Development" data-jp="AIプログラム作成・開発">AI Program Creation & Development</h3>
-                        <p class="project-description" data-en="Currently developing applications using AI and machine learning at SYSystem Co., Ltd. Creating technical presentations on AI concepts and practical applications." data-jp="株式会社エスワイシステムでAIと機械学習を使用したアプリケーションを開発中。AI概念と実用的なアプリケーションに関する技術プレゼンテーションを作成。">Currently developing applications using AI and machine learning at SYSystem Co., Ltd. Creating technical presentations on AI concepts and practical applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">VSCode</span>
-                            <span class="tag">AI/ML</span>
-                        </div>
-                        <div class="project-date">October 2024 - Present</div>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="project-card glass-effect" data-project-id="2">
-                        <h3 class="project-title" data-en="Video Surveillance System" data-jp="ビデオ監視システム">Video Surveillance System</h3>
-                        <p class="project-description" data-en="Capstone university project developing a comprehensive video surveillance application with real-time image recognition, action detection, and time-based monitoring using machine learning and AI." data-jp="機械学習とAIを使用したリアルタイム画像認識、アクション検知、時間ベース監視機能を持つ総合的なビデオ監視アプリケーションを開発した大学の卒業研究プロジェクト。">Capstone university project developing a comprehensive video surveillance application with real-time image recognition, action detection, and time-based monitoring using machine learning and AI.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Google Colab</span>
-                        </div>
-                        <div class="project-date">July 2022 - Dec 2022</div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="project-card glass-effect" data-project-id="3">
-                        <h3 class="project-title" data-en="Web Application Version Upgrade & Testing" data-jp="ウェブアプリケーションバージョンアップグレード・テスト">Web Application Version Upgrade & Testing</h3>
-                        <p class="project-description" data-en="Part of a team responsible for a major version upgrade of a web application. Conducted functional testing, built and migrated databases, and identified and fixed bugs to ensure smooth transition." data-jp="ウェブアプリケーションのメジャーバージョンアップグレードを担当するチームの一員。機能テスト、データベースの構築と移行、バグの特定と修正を実施しスムーズな移行を実現。">Part of a team responsible for a major version upgrade of a web application. Conducted functional testing, built and migrated databases, and identified and fixed bugs to ensure smooth transition.</p>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Selenium</span>
-                        </div>
-                        <div class="project-date">Jan 2025 - Mar 2025</div>
-                    </div>
-
-                    <!-- Project Card 4 -->
-                    <div class="project-card glass-effect" data-project-id="4">
-                        <h3 class="project-title" data-en="EC Site Penetration Testing" data-jp="ECサイトペネトレーションテスト">EC Site Penetration Testing</h3>
-                        <p class="project-description" data-en="Conducted in-depth security analysis of an e-commerce website. Performed unit testing and penetration testing to identify vulnerabilities using a suite of security tools." data-jp="イーコマースウェブサイトの深層セキュリティ分析を実施。セキュリティツールスイートを使用してユニットテストとペネトレーションテストを実行し、脆弱性を特定。">Conducted in-depth security analysis of an e-commerce website. Performed unit testing and penetration testing to identify vulnerabilities using a suite of security tools.</p>
-                        <div class="project-tags">
-                            <span class="tag">JMeter</span>
-                            <span class="tag">Postman</span>
-                            <span class="tag">Nmap</span>
-                            <span class="tag">Burp Suite</span>
-                            <span class="tag">Kali Linux</span>
-                        </div>
-                        <div class="project-date">May 2023 - Aug 2023</div>
-                    </div>
-
-                    <!-- Project Card 5 -->
-                    <div class="project-card glass-effect" data-project-id="5">
-                        <h3 class="project-title" data-en="Bird Species Detection" data-jp="鳥類検知">Bird Species Detection</h3>
-                        <p class="project-description" data-en="Machine learning project to identify different bird species from images. Handled the entire pipeline from data collection and algorithm development to result validation." data-jp="画像から異なる鳥類を識別する機械学習プロジェクト。データ収集からアルゴリズム開発、結果検証までの全パイプラインを担当。">Machine learning project to identify different bird species from images. Handled the entire pipeline from data collection and algorithm development to result validation.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Google Colab</span>
-                        </div>
-                        <div class="project-date">June 2021 - Aug 2021</div>
-                        <a href="https://github.com/nafis2675/Bird_Species_Detection.git" target="_blank" class="cta-button primary small">
-                            <span class="btn-text" data-en="View on GitHub" data-jp="GitHubで見る">View on GitHub</span>
-                            <span class="btn-glow"></span>
-                        </a>
-                    </div>
-
-                    <!-- Project Card 6 -->
-                    <div class="project-card glass-effect" data-project-id="6">
-                        <h3 class="project-title" data-en="Customer Survey Data Analysis" data-jp="顧客調査データ分析">Customer Survey Data Analysis</h3>
-                        <p class="project-description" data-en="A data analysis project focused on extracting meaningful insights from customer survey data. My role involved cleaning the data, performing analysis using various tools, and presenting the findings to identify key customer trends." data-jp="顧客調査データから意味のある洞察を抽出することに焦点を当てたデータ分析プロジェクト。データのクリーニング、さまざまなツールを使用した分析の実行、主要な顧客トレンドを特定するための調査結果の発表を担当。">A data analysis project focused on extracting meaningful insights from customer survey data. My role involved cleaning the data, performing analysis using various tools, and presenting the findings to identify key customer trends.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">R</span>
-                            <span class="tag">Excel</span>
-                            <span class="tag">Google Sheets</span>
-                            <span class="tag">Power BI</span>
-                        </div>
-                        <a href="https://github.com/nafis2675/Da_Apon" target="_blank" class="cta-button primary small">
-                            <span class="btn-text" data-en="View on GitHub" data-jp="GitHubで見る">View on GitHub</span>
-                            <span class="btn-glow"></span>
-                        </a>
-                    </div>
-
-                    <!-- Project Card 7 -->
-                    <div class="project-card glass-effect" data-project-id="7">
-                        <h3 class="project-title" data-en="Freelance Game & Application Testing" data-jp="フリーランスゲーム・アプリケーションテスト">Freelance Game & Application Testing</h3>
-                        <p class="project-description" data-en="Performed comprehensive testing for games like 'Gold Fever' (for CrusherslabQA) and applications for clients including META (for Tester Work). Conducted functional, system, UI, and security testing across various platforms." data-jp="'Gold Fever'（CrusherslabQA向け）のようなゲームやMETA（Tester Work向け）のアプリケーションの総合テストを実施。さまざまなプラットフォームで機能、システム、UI、セキュリティテストを実施。">Performed comprehensive testing for games like 'Gold Fever' (for CrusherslabQA) and applications for clients including META (for Tester Work). Conducted functional, system, UI, and security testing across various platforms.</p>
-                        <div class="project-tags">
-                            <span class="tag">Jira</span>
-                            <span class="tag">Unity</span>
-                            <span class="tag">Selenium</span>
-                            <span class="tag">Manual Testing</span>
-                        </div>
-                        <div class="project-date">2023 - 2024</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class="projects-section"><div class="container">
+<h1 class="section-title glitch-effect" data-en="Selected work" data-jp="主な実績">Selected work</h1>
+<p class="section-description" data-en="Recent client work is summarized without code or client data. A public repository is linked where available." data-jp="最近の顧客向け実績は、コードや顧客データを公開せずに概要を紹介しています。公開リポジトリがある場合はリンクを記載しています。">Recent client work is summarized without code or client data. A public repository is linked where available.</p>
+<div class="projects-grid">
+<article class="project-card glass-effect"><h2 class="project-title" data-en="Agentic RAG assistant" data-jp="RAGエージェント">Agentic RAG assistant</h2>
+<p class="project-description" data-en="Designed a Japanese-language assistant with agent-selected tools, hybrid dense and keyword retrieval, source attribution, and read-only SQL safeguards." data-jp="ツールを選択するエージェント、ベクトル検索とキーワード検索の組み合わせ、出典表示、読み取り専用SQLの安全対策を備えた日本語AIアシスタントを設計しました。">Designed a Japanese-language assistant with agent-selected tools, hybrid dense and keyword retrieval, source attribution, and read-only SQL safeguards.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">RAG</span><span class="tag">BM25</span><span class="tag">SQL</span>
+</div>
+<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
+<article class="project-card glass-effect"><h2 class="project-title" data-en="LLM evaluation for voice AI" data-jp="音声AIのLLM評価">LLM evaluation for voice AI</h2>
+<p class="project-description" data-en="Built a repeatable test workflow that runs simulated calls and grades transcripts against expected outcomes. It reduced manual regression-testing effort by approximately 80%." data-jp="模擬通話を実行し、文字起こしを期待結果と照合して評価する再現可能なテスト工程を構築しました。手動回帰テストの工数を約80％削減しました。">Built a repeatable test workflow that runs simulated calls and grades transcripts against expected outcomes. It reduced manual regression-testing effort by approximately 80%.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">LLM-as-a-Judge</span><span class="tag">Automation</span>
+</div>
+<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
+<article class="project-card glass-effect"><h2 class="project-title" data-en="LLM product recommendations" data-jp="LLMによる商品推薦">LLM product recommendations</h2>
+<p class="project-description" data-en="Compared cold-start approaches using measured results, then delivered a catalog-aware LLM workflow that produces selections and clear reasons while tracking cost and latency." data-jp="実測結果を基にコールドスタート対策を比較し、商品選定と理由を生成するLLMワークフローを実装しました。コストと応答時間も計測しました。">Compared cold-start approaches using measured results, then delivered a catalog-aware LLM workflow that produces selections and clear reasons while tracking cost and latency.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Data analysis</span>
+</div>
+<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
+<article class="project-card glass-effect"><h2 class="project-title" data-en="Appointment recommendations" data-jp="予約推薦システム">Appointment recommendations</h2>
+<p class="project-description" data-en="Analyzed historical visits before designing a recommendation approach, identified a data-quality limit, and added a gate for cases without enough history." data-jp="過去の利用履歴を分析して推薦方式を設計し、データ品質の制約を特定しました。履歴が不足する場合は推薦を控える仕組みも設計しました。">Analyzed historical visits before designing a recommendation approach, identified a data-quality limit, and added a gate for cases without enough history.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">Recommendation systems</span><span class="tag">Data quality</span>
+</div>
+<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
+<article class="project-card glass-effect"><h2 class="project-title" data-en="AI-assisted product data entry" data-jp="AIによる商品データ入力支援">AI-assisted product data entry</h2>
+<p class="project-description" data-en="Implemented a search-and-extraction agent flow to propose structured product fields, with human confirmation before accepting generated values." data-jp="検索と情報抽出を行うエージェントの処理を実装し、生成された商品情報は人が確認してから採用する方式にしました。">Implemented a search-and-extraction agent flow to propose structured product fields, with human confirmation before accepting generated values.</p>
+<div class="project-tags">
+<span class="tag">Agents</span><span class="tag">Extraction</span><span class="tag">Human review</span>
+</div>
+<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
+<article class="project-card glass-effect"><h2 class="project-title" data-en="Bird species detection" data-jp="鳥類の識別">Bird species detection</h2>
+<p class="project-description" data-en="Earlier public machine-learning work on bird species identification. The repository contains the project materials." data-jp="鳥類を識別する機械学習の公開プロジェクトです。リポジトリで資料を確認できます。">Earlier public machine-learning work on bird species identification. The repository contains the project materials.</p>
+<div class="project-tags">
+<span class="tag">Computer vision</span><span class="tag">Machine learning</span>
+</div>
+<p class="project-date" data-en="Earlier public project" data-jp="以前の公開プロジェクト">Earlier public project</p>
+<a href="https://github.com/nafis2675/Bird_Species_Detection" target="_blank" rel="noopener noreferrer" class="cta-button primary small"><span class="btn-text" data-en="View public code" data-jp="公開コードを見る">View public code</span></a></article>
+</div>
+</div></section>
         
         <!-- Scroll Down Indicator -->
         <div class="scroll-down-indicator">
@@ -203,19 +136,17 @@
     
     <!-- Terminal Toggle Button -->
     <button class="terminal-toggle" id="terminal-toggle" title="Open Terminal">
-        <span>>_</span>
+        <span>&gt;_</span>
     </button>
     
     <!-- Footer -->
     <footer class="footer glass-effect">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text" data-en="© 2024 Nafis Iqbal - Software Engineer Portfolio. Built with passion and code." data-jp="© 2024 ナフィス・イクバル - ソフトウェアエンジニアポートフォリオ。情熱とコードで構築。">
-                    © 2024 Nafis Iqbal - Software Engineer Portfolio. Built with passion and code.
-                </p>
+                <p class="footer-text" data-en="© 2026 Nafis Iqbal. Generative AI Engineer." data-jp="© 2026 ナフィス・イクバル。生成AIエンジニア。">© 2026 Nafis Iqbal. Generative AI Engineer.</p>
                 <div class="footer-links">
-                    <a href="https://github.com/nafis2675" target="_blank" class="footer-link">GitHub</a>
-                    <a href="https://linkedin.com/in/nafis-iqbal" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://github.com/nafis2675" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nafis-iqbal-12186622a/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
                 </div>
             </div>
         </div>
