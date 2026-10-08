@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Nafis Iqbal</title>
-    <meta name="description" content="Selected work in agentic RAG, LLM evaluation, recommendation systems, and public machine learning projects.">
+    <meta name="description" content="Selected work by Nafis Iqbal: agentic RAG, LLM evaluation pipelines, recommendation engines, computer vision, and public machine learning projects.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,45 +59,119 @@
     <main class="main-content">
         <section class="projects-section"><div class="container">
 <h1 class="section-title glitch-effect" data-en="Selected work" data-jp="主な実績">Selected work</h1>
-<p class="section-description" data-en="Recent client work is summarized without code or client data. A public repository is linked where available." data-jp="最近の顧客向け実績は、コードや顧客データを公開せずに概要を紹介しています。公開リポジトリがある場合はリンクを記載しています。">Recent client work is summarized without code or client data. A public repository is linked where available.</p>
+<p class="section-description" data-en="Client work is summarized without code or client data. Measured results are included where I have them. Internal and public projects link to repositories where the code is mine to share." data-jp="顧客向けの実績は、コードや顧客データを公開せずに概要を紹介しています。測定した結果がある場合は記載しています。社内および公開プロジェクトは、公開可能なものにリポジトリのリンクを添えています。">Client work is summarized without code or client data. Measured results are included where I have them. Internal and public projects link to repositories where the code is mine to share.</p>
+
+<h2 class="projects-group-title" data-en="Client delivery — Japanese healthcare SaaS" data-jp="顧客向け開発 — 医療SaaS">Client delivery — Japanese healthcare SaaS</h2>
 <div class="projects-grid">
-<article class="project-card glass-effect"><h2 class="project-title" data-en="Agentic RAG assistant" data-jp="RAGエージェント">Agentic RAG assistant</h2>
-<p class="project-description" data-en="Designed a Japanese-language assistant with agent-selected tools, hybrid dense and keyword retrieval, source attribution, and read-only SQL safeguards." data-jp="ツールを選択するエージェント、ベクトル検索とキーワード検索の組み合わせ、出典表示、読み取り専用SQLの安全対策を備えた日本語AIアシスタントを設計しました。">Designed a Japanese-language assistant with agent-selected tools, hybrid dense and keyword retrieval, source attribution, and read-only SQL safeguards.</p>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Agentic RAG clinic assistant" data-jp="RAGエージェント型 クリニックアシスタント">Agentic RAG clinic assistant</h3>
+<p class="project-description" data-en="An assistant that lets clinic staff query patient records, appointments, and clinical guidelines in natural Japanese, replacing multi-screen manual lookup. I moved the system from a fixed LLM-router pipeline to autonomous agent tool selection across five tools, based on a structured eight-point architecture comparison. Retrieval combines dense embeddings and BM25 through Reciprocal Rank Fusion, with Japanese morphological analysis to recover domain terminology that dense retrieval alone missed." data-jp="クリニックのスタッフが患者記録・予約・診療ガイドラインを自然な日本語で検索できるアシスタントです。複数画面を手作業で確認する運用を置き換えました。8項目のアーキテクチャ比較に基づき、固定のLLMルーター方式から、5つのツールをエージェントが自律的に選択する方式へ移行しました。検索はベクトル検索とBM25をReciprocal Rank Fusionで統合し、日本語の形態素解析によってベクトル検索だけでは拾えない専門用語を補完しています。">An assistant that lets clinic staff query patient records, appointments, and clinical guidelines in natural Japanese, replacing multi-screen manual lookup. I moved the system from a fixed LLM-router pipeline to autonomous agent tool selection across five tools, based on a structured eight-point architecture comparison. Retrieval combines dense embeddings and BM25 through Reciprocal Rank Fusion, with Japanese morphological analysis to recover domain terminology that dense retrieval alone missed.</p>
+<p class="project-description" data-en="Dual guardrails protect patient data: SELECT-only SQL validation plus output inspection, with SSE streaming responses and source attribution." data-jp="患者データの保護には二重のガードレールを設けています。SELECT文のみを許可するSQL検証と出力内容の検査を組み合わせ、SSEによるストリーミング応答と出典表示に対応しています。">Dual guardrails protect patient data: SELECT-only SQL validation plus output inspection, with SSE streaming responses and source attribution.</p>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">RAG</span><span class="tag">BM25</span><span class="tag">SQL</span>
+<span class="tag">Agentic RAG</span><span class="tag">OpenAI Agents SDK</span><span class="tag">BM25 + RRF</span><span class="tag">fugashi</span><span class="tag">Text-to-SQL</span><span class="tag">Guardrails</span>
 </div>
-<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
-<article class="project-card glass-effect"><h2 class="project-title" data-en="LLM evaluation for voice AI" data-jp="音声AIのLLM評価">LLM evaluation for voice AI</h2>
-<p class="project-description" data-en="Built a repeatable test workflow that runs simulated calls and grades transcripts against expected outcomes. It reduced manual regression-testing effort by approximately 80%." data-jp="模擬通話を実行し、文字起こしを期待結果と照合して評価する再現可能なテスト工程を構築しました。手動回帰テストの工数を約80％削減しました。">Built a repeatable test workflow that runs simulated calls and grades transcripts against expected outcomes. It reduced manual regression-testing effort by approximately 80%.</p>
+<p class="project-date" data-en="Requirements through release · Source code private" data-jp="要件定義からリリースまで・ソースコード非公開">Requirements through release · Source code private</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="LLM evaluation for an AI voice system" data-jp="音声AIのLLM評価基盤">LLM evaluation for an AI voice system</h3>
+<p class="project-description" data-en="An automated test harness in which an AI agent places live phone calls, role-plays patients in Japanese, and grades the transcripts against expected outcomes using LLM-as-a-Judge. It cut manual regression-testing effort by roughly 80%, turning a non-reproducible manual process into a repeatable pipeline." data-jp="AIエージェントが実際に電話を発信し、日本語で患者役を演じ、文字起こしをLLM-as-a-Judgeで期待結果と照合する自動テスト基盤です。手動回帰テストの工数を約80％削減し、再現性のなかった作業を反復可能なパイプラインに置き換えました。">An automated test harness in which an AI agent places live phone calls, role-plays patients in Japanese, and grades the transcripts against expected outcomes using LLM-as-a-Judge. It cut manual regression-testing effort by roughly 80%, turning a non-reproducible manual process into a repeatable pipeline.</p>
+<p class="project-description" data-en="Per-call API cost is calculated automatically from token usage, and non-engineers can author test cases through a spreadsheet interface." data-jp="通話ごとのAPIコストはトークン使用量から自動計算され、エンジニア以外のメンバーもスプレッドシート上でテストケースを作成できます。">Per-call API cost is calculated automatically from token usage, and non-engineers can author test cases through a spreadsheet interface.</p>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">LLM-as-a-Judge</span><span class="tag">Automation</span>
+<span class="tag">LLM-as-a-Judge</span><span class="tag">OpenAI Realtime API</span><span class="tag">Twilio</span><span class="tag">Test automation</span><span class="tag">Cost tracking</span>
 </div>
-<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
-<article class="project-card glass-effect"><h2 class="project-title" data-en="LLM product recommendations" data-jp="LLMによる商品推薦">LLM product recommendations</h2>
-<p class="project-description" data-en="Compared cold-start approaches using measured results, then delivered a catalog-aware LLM workflow that produces selections and clear reasons while tracking cost and latency." data-jp="実測結果を基にコールドスタート対策を比較し、商品選定と理由を生成するLLMワークフローを実装しました。コストと応答時間も計測しました。">Compared cold-start approaches using measured results, then delivered a catalog-aware LLM workflow that produces selections and clear reasons while tracking cost and latency.</p>
+<p class="project-date" data-en="Requirements through release · Source code private" data-jp="要件定義からリリースまで・ソースコード非公開">Requirements through release · Source code private</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="LLM product recommendation engine" data-jp="LLMによる商品推薦エンジン">LLM product recommendation engine</h3>
+<p class="project-description" data-en="A cold-start problem with no purchase history. I tested and rejected two approaches on measured evidence: vector pre-filtering converged to 81–83% similarity across the catalog, and lightweight-model filtering degenerated to list order. The delivered design is a single-pass full-catalog LLM architecture that generates product selections, rationale, and patient-facing copy at approximately ¥1.2 per recommendation and 1.9–13.0 s latency." data-jp="購買履歴がないコールドスタート問題に取り組みました。実測に基づき2つの方式を検証し却下しています。ベクトル事前フィルタは商品全体で類似度81〜83％に収束し、軽量モデルによるフィルタはリスト順の出力に退化しました。最終的に、商品選定・理由・患者向け文面を生成する単一パスの全カタログLLM構成を実装し、推薦1件あたり約1.2円、応答時間1.9〜13.0秒を達成しました。">A cold-start problem with no purchase history. I tested and rejected two approaches on measured evidence: vector pre-filtering converged to 81–83% similarity across the catalog, and lightweight-model filtering degenerated to list order. The delivered design is a single-pass full-catalog LLM architecture that generates product selections, rationale, and patient-facing copy at approximately ¥1.2 per recommendation and 1.9–13.0 s latency.</p>
+<p class="project-description" data-en="I also identified the roughly 150-item catalog size at which a two-stage architecture becomes cost-justified." data-jp="また、2段階構成がコスト的に見合うようになる分岐点が、商品数およそ150件であることを特定しました。">I also identified the roughly 150-item catalog size at which a two-stage architecture becomes cost-justified.</p>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Data analysis</span>
+<span class="tag">LLM</span><span class="tag">Cold start</span><span class="tag">Cost / latency</span><span class="tag">pandas</span>
 </div>
-<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
-<article class="project-card glass-effect"><h2 class="project-title" data-en="Appointment recommendations" data-jp="予約推薦システム">Appointment recommendations</h2>
-<p class="project-description" data-en="Analyzed historical visits before designing a recommendation approach, identified a data-quality limit, and added a gate for cases without enough history." data-jp="過去の利用履歴を分析して推薦方式を設計し、データ品質の制約を特定しました。履歴が不足する場合は推薦を控える仕組みも設計しました。">Analyzed historical visits before designing a recommendation approach, identified a data-quality limit, and added a gate for cases without enough history.</p>
+<p class="project-date" data-en="Requirements through release · Source code private" data-jp="要件定義からリリースまで・ソースコード非公開">Requirements through release · Source code private</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Appointment recommendation system" data-jp="予約推薦システム">Appointment recommendation system</h3>
+<p class="project-description" data-en="I analyzed patient visit histories in pandas before committing to a build. Free-text treatment names turned out to be the accuracy ceiling, at 85–90% keyword-match recovery, so I recommended a mandatory-category schema change to the client's backend rather than building on unreliable data." data-jp="実装に着手する前に、pandasで患者の来院履歴を分析しました。自由記述の施術名が精度の上限となっており、キーワード照合での回収率は85〜90％でした。そのため、信頼性の低いデータの上に構築するのではなく、必須カテゴリを設けるスキーマ変更を顧客側のバックエンドに提案しました。">I analyzed patient visit histories in pandas before committing to a build. Free-text treatment names turned out to be the accuracy ceiling, at 85–90% keyword-match recovery, so I recommended a mandatory-category schema change to the client's backend rather than building on unreliable data.</p>
+<p class="project-description" data-en="The design pairs collaborative filtering with a sequence model, using transition-matrix analysis to disprove a naive last-treatment heuristic, and a priority gate withholds recommendations for patients without sufficient history." data-jp="設計は協調フィルタリングと系列モデルを組み合わせ、遷移行列の分析によって「直前の施術をそのまま薦める」単純な方式が妥当でないことを示しました。履歴が十分でない患者には推薦を出さない優先度ゲートも設けています。">The design pairs collaborative filtering with a sequence model, using transition-matrix analysis to disprove a naive last-treatment heuristic, and a priority gate withholds recommendations for patients without sufficient history.</p>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">Recommendation systems</span><span class="tag">Data quality</span>
+<span class="tag">Collaborative filtering</span><span class="tag">Sequence models</span><span class="tag">Data quality</span><span class="tag">pandas</span>
 </div>
-<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
-<article class="project-card glass-effect"><h2 class="project-title" data-en="AI-assisted product data entry" data-jp="AIによる商品データ入力支援">AI-assisted product data entry</h2>
-<p class="project-description" data-en="Implemented a search-and-extraction agent flow to propose structured product fields, with human confirmation before accepting generated values." data-jp="検索と情報抽出を行うエージェントの処理を実装し、生成された商品情報は人が確認してから採用する方式にしました。">Implemented a search-and-extraction agent flow to propose structured product fields, with human confirmation before accepting generated values.</p>
+<p class="project-date" data-en="Requirements through release · Source code private" data-jp="要件定義からリリースまで・ソースコード非公開">Requirements through release · Source code private</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Product master AI auto-fill" data-jp="商品マスタのAI自動入力">Product master AI auto-fill</h3>
+<p class="project-description" data-en="A two-stage agent architecture — a search agent feeding an extraction agent — that collects and structures B2B dental product data from JAN codes and product names. I analyzed the existing product master to define which fields to auto-fill and verify." data-jp="検索エージェントが抽出エージェントに情報を渡す2段構成のエージェントにより、JANコードと商品名からB2B歯科商材のデータを収集・構造化します。既存の商品マスタを分析し、自動入力および検証の対象項目を定義しました。">A two-stage agent architecture — a search agent feeding an extraction agent — that collects and structures B2B dental product data from JAN codes and product names. I analyzed the existing product master to define which fields to auto-fill and verify.</p>
+<p class="project-description" data-en="Every AI-populated field requires human confirmation, and user corrections are logged as future training signal." data-jp="AIが入力したすべての項目は人による確認を必須とし、ユーザーの修正内容は将来の学習データとして記録しています。">Every AI-populated field requires human confirmation, and user corrections are logged as future training signal.</p>
 <div class="project-tags">
-<span class="tag">Agents</span><span class="tag">Extraction</span><span class="tag">Human review</span>
+<span class="tag">Multi-agent</span><span class="tag">Structured extraction</span><span class="tag">Human in the loop</span>
 </div>
-<p class="project-date" data-en="Selected client work · Source code private" data-jp="顧客向け実績・ソースコード非公開">Selected client work · Source code private</p></article>
-<article class="project-card glass-effect"><h2 class="project-title" data-en="Bird species detection" data-jp="鳥類の識別">Bird species detection</h2>
-<p class="project-description" data-en="Earlier public machine-learning work on bird species identification. The repository contains the project materials." data-jp="鳥類を識別する機械学習の公開プロジェクトです。リポジトリで資料を確認できます。">Earlier public machine-learning work on bird species identification. The repository contains the project materials.</p>
+<p class="project-date" data-en="Requirements through release · Source code private" data-jp="要件定義からリリースまで・ソースコード非公開">Requirements through release · Source code private</p>
+</article>
+
+</div>
+
+<h2 class="projects-group-title" data-en="Internal initiatives — self-directed" data-jp="社内の自主プロジェクト">Internal initiatives — self-directed</h2>
+<div class="projects-grid">
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Bilingual RAG chatbot over 450+ company pages" data-jp="450ページ超の自社サイトを対象とした日英RAGチャットボット">Bilingual RAG chatbot over 450+ company pages</h3>
+<p class="project-description" data-en="A Japanese and English chatbot built over the company's public websites, covering more than 450 pages across the group companies. Multilingual embeddings with FAISS, plus hybrid vector and keyword re-ranking that fixed a cross-lingual retrieval failure. A FastAPI backend supports swappable hosted and local LLM providers, answers are source-cited, and the whole thing ships as an embeddable web widget." data-jp="グループ各社の公開サイト450ページ超を対象とした、日本語・英語対応のチャットボットです。FAISSによる多言語埋め込みに加え、ベクトル検索とキーワード検索を組み合わせた再ランキングにより、言語をまたいだ検索の失敗を解消しました。FastAPIのバックエンドはホスト型とローカルのLLMを差し替え可能で、回答には出典を表示し、Webサイトに埋め込めるウィジェットとして提供しています。">A Japanese and English chatbot built over the company's public websites, covering more than 450 pages across the group companies. Multilingual embeddings with FAISS, plus hybrid vector and keyword re-ranking that fixed a cross-lingual retrieval failure. A FastAPI backend supports swappable hosted and local LLM providers, answers are source-cited, and the whole thing ships as an embeddable web widget.</p>
+<p class="project-description" data-en="Reviewed with management, who requested follow-on features." data-jp="経営層にレビューを行い、追加機能の要望をいただきました。">Reviewed with management, who requested follow-on features.</p>
 <div class="project-tags">
-<span class="tag">Computer vision</span><span class="tag">Machine learning</span>
+<span class="tag">FAISS</span><span class="tag">Multilingual embeddings</span><span class="tag">FastAPI</span><span class="tag">Local LLMs</span><span class="tag">Web widget</span>
 </div>
-<p class="project-date" data-en="Earlier public project" data-jp="以前の公開プロジェクト">Earlier public project</p>
-<a href="https://github.com/nafis2675/Bird_Species_Detection" target="_blank" rel="noopener noreferrer" class="cta-button primary small"><span class="btn-text" data-en="View public code" data-jp="公開コードを見る">View public code</span></a></article>
+<p class="project-date" data-en="Internal project · Source code private" data-jp="社内プロジェクト・ソースコード非公開">Internal project · Source code private</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="YOLO 11 surgical-instrument detection" data-jp="YOLO 11による手術器具の検出">YOLO 11 surgical-instrument detection</h3>
+<p class="project-description" data-en="A detection and tracking system for surgical instruments, built in about four days for sales enablement. It reached 85–90% detection accuracy on general objects and presents results through before-and-after differential visualization." data-jp="営業活動の支援として、約4日間で構築した手術器具の検出・追跡システムです。一般物体で85〜90％の検出精度に到達し、処置前後の差分を可視化して結果を提示します。">A detection and tracking system for surgical instruments, built in about four days for sales enablement. It reached 85–90% detection accuracy on general objects and presents results through before-and-after differential visualization.</p>
+<div class="project-tags">
+<span class="tag">YOLO 11</span><span class="tag">Object tracking</span><span class="tag">OpenCV</span><span class="tag">Rapid prototyping</span>
+</div>
+<p class="project-date" data-en="Internal project · Built in ~4 days" data-jp="社内プロジェクト・約4日間で構築">Internal project · Built in ~4 days</p>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="PDF-to-timesheet reconciliation" data-jp="PDFと勤怠表の照合ツール">PDF-to-timesheet reconciliation</h3>
+<p class="project-description" data-en="A tool that replaced manual visual cross-checking between PDFs and timesheets with automated diff detection. I presented it at an internal training session." data-jp="PDFと勤怠表を目視で突き合わせていた作業を、差分の自動検出に置き換えたツールです。社内の研修で発表しました。">A tool that replaced manual visual cross-checking between PDFs and timesheets with automated diff detection. I presented it at an internal training session.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">PDF parsing</span><span class="tag">Automation</span>
+</div>
+<p class="project-date" data-en="Internal project · Presented internally" data-jp="社内プロジェクト・社内発表">Internal project · Presented internally</p>
+</article>
+
+</div>
+
+<h2 class="projects-group-title" data-en="Public projects" data-jp="公開プロジェクト">Public projects</h2>
+<div class="projects-grid">
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Video surveillance system" data-jp="映像監視システム">Video surveillance system</h3>
+<p class="project-description" data-en="An AI surveillance project combining image recognition, action recognition, and time monitoring, built with Python, OpenCV, and deep learning." data-jp="画像認識・行動認識・時間監視を組み合わせたAI監視プロジェクトです。Python、OpenCV、深層学習で構築しました。">An AI surveillance project combining image recognition, action recognition, and time monitoring, built with Python, OpenCV, and deep learning.</p>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Deep learning</span><span class="tag">Action recognition</span>
+</div>
+<p class="project-date" data-en="Public repository" data-jp="公開リポジトリ">Public repository</p>
+<a href="https://github.com/nafis2675/video-surviellance-project" target="_blank" rel="noopener noreferrer" class="cta-button primary small"><span class="btn-text" data-en="View public code" data-jp="公開コードを見る">View public code</span></a>
+</article>
+
+<article class="project-card glass-effect">
+<h3 class="project-title" data-en="Bird species detection" data-jp="鳥類の識別">Bird species detection</h3>
+<p class="project-description" data-en="Earlier machine-learning work on bird species identification from images. The repository contains the notebooks and project materials." data-jp="画像から鳥類を識別する、以前の機械学習プロジェクトです。リポジトリにノートブックと資料が含まれています。">Earlier machine-learning work on bird species identification from images. The repository contains the notebooks and project materials.</p>
+<div class="project-tags">
+<span class="tag">Computer vision</span><span class="tag">CNN</span><span class="tag">Jupyter</span>
+</div>
+<p class="project-date" data-en="Public repository" data-jp="公開リポジトリ">Public repository</p>
+<a href="https://github.com/nafis2675/Bird_Species_Detection" target="_blank" rel="noopener noreferrer" class="cta-button primary small"><span class="btn-text" data-en="View public code" data-jp="公開コードを見る">View public code</span></a>
+</article>
+
 </div>
 </div></section>
         

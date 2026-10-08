@@ -28,33 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // Delay before output appears
     }
 
-    // Stat number animation
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const animateNumber = (element) => {
-        const target = parseInt(element.getAttribute('data-count'));
-        const duration = 2000; // milliseconds
-        const increment = target / (duration / 16); // ~60 frames per second
-        let current = 0;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            element.textContent = Math.floor(current);
-        }, 16);
-    };
-
-    const statObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateNumber(entry.target);
-                statObserver.unobserve(entry.target); // Stop observing once animated
-            }
-        });
-    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
-
-    statNumbers.forEach(stat => statObserver.observe(stat));
+    // Stat number animation lives in main.js (PortfolioApp.animateStats).
+    // A second implementation used to run here as well: two setIntervals wrote
+    // to the same .stat-number elements, which made the counters crawl and
+    // dropped the data-prefix / data-suffix characters. Do not re-add it here.
 
     // Fade-in-up animation for sections/cards
     const animateElements = document.querySelectorAll(

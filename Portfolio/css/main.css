@@ -809,8 +809,16 @@ a:hover {
 .projects-section,
 .about-section,
 .experience-section,
-.contact-section {
+.contact-section,
+.stats-section {
   padding: var(--spacing-3xl) 0;
+  /* .scanlines is position:fixed with z-index:1. Static elements paint below
+     positioned ones, so without a position here the overlay sits on top of the
+     page content. That is invisible with the default translucent gradient but
+     hides the whole page under any extension or browser mode that repaints the
+     overlay opaque. .hero-section already sets position:relative for this. */
+  position: relative;
+  z-index: 2;
 }
 
 .section-title {
@@ -1078,4 +1086,42 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
+}
+
+/* ===== PROJECT GROUPS ===== */
+.projects-group-title {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  margin: var(--spacing-3xl) 0 var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-glass-border);
+}
+
+.projects-grid + .projects-group-title {
+  margin-top: var(--spacing-3xl);
+}
+
+.education-detail {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-xs);
+}
+
+.project-card .project-description + .project-description {
+  margin-top: var(--spacing-sm);
+}
+
+.contact-note {
+  text-align: left;
+}
+
+.contact-note .card-title {
+  text-align: center;
+}
+
+.contact-note-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
 }

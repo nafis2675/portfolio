@@ -6,22 +6,39 @@ class InteractiveTerminal {
 
     this.commands = {
       help: () => this.lines([
-        ['Commands: help, about, skills, projects, contact, github, linkedin, date, clear',
-         'コマンド: help, about, skills, projects, contact, github, linkedin, date, clear']
+        ['Commands: help, about, skills, projects, experience, languages, contact, github, linkedin, date, clear',
+         'コマンド: help, about, skills, projects, experience, languages, contact, github, linkedin, date, clear']
       ]),
       about: () => this.lines([
         ['Nafis Iqbal · Generative AI Engineer · Tokyo, Japan', 'ナフィス・イクバル · 生成AIエンジニア · 東京'],
-        ['I build agentic RAG, recommendation, and LLM evaluation systems.', 'RAGエージェント、推薦システム、LLM評価システムを開発しています。'],
-        ['My earlier software QA work informs how I test reliability.', 'ソフトウェアQAの経験を信頼性の検証に生かしています。']
+        ['Two years building agentic RAG, LLM recommendation, and evaluation systems in Japan.', '日本で2年間、RAGエージェント、LLM推薦システム、評価基盤を開発しています。'],
+        ['Five client-facing AI projects delivered end to end for a healthcare SaaS platform.', '医療SaaS向けに5件の顧客向けAIプロジェクトを一貫して担当しました。'],
+        ['A software QA background is why evaluation and guardrails come first.', 'ソフトウェアQAの経験から、評価とガードレールを最優先に考えています。']
       ]),
       skills: () => this.lines([
-        ['AI: Agentic RAG, LLM evaluation, hybrid retrieval, recommendations', 'AI: RAGエージェント、LLM評価、ハイブリッド検索、推薦'],
-        ['Engineering: Python, FastAPI, SQL, JavaScript, Docker', '開発: Python、FastAPI、SQL、JavaScript、Docker'],
-        ['QA: Functional testing, Selenium, JMeter, Postman', 'QA: 機能テスト、Selenium、JMeter、Postman']
+        ['GenAI: OpenAI Agents SDK, Realtime API, Gemini, local LLMs, LLM-as-a-Judge, guardrails', '生成AI: OpenAI Agents SDK、Realtime API、Gemini、ローカルLLM、LLM-as-a-Judge、ガードレール'],
+        ['RAG: Agentic RAG, hybrid search (dense + BM25), RRF, FAISS, ChromaDB, Text-to-SQL', 'RAG: RAGエージェント、ハイブリッド検索（ベクトル + BM25）、RRF、FAISS、ChromaDB、Text-to-SQL'],
+        ['ML: PyTorch, TensorFlow, OpenCV, YOLO 11, collaborative filtering, sequence models', 'ML: PyTorch、TensorFlow、OpenCV、YOLO 11、協調フィルタリング、系列モデル'],
+        ['Engineering: Python, FastAPI, SQL, JavaScript, Docker, AWS, n8n, Twilio', '開発: Python、FastAPI、SQL、JavaScript、Docker、AWS、n8n、Twilio'],
+        ['QA: LLM evaluation pipelines, Selenium, JMeter, Postman, load and penetration testing', 'QA: LLM評価パイプライン、Selenium、JMeter、Postman、負荷・侵入テスト']
       ]),
       projects: () => this.lines([
-        ['Selected work: agentic RAG, voice AI evaluation, recommendations, data-entry agents.', '主な実績: RAGエージェント、音声AI評価、推薦、データ入力支援エージェント。'],
+        ['Client work: agentic RAG clinic assistant, voice AI evaluation, LLM recommendations,', '顧客向け: RAGエージェント型アシスタント、音声AI評価、LLM推薦、'],
+        ['appointment recommendations, product master AI auto-fill.', '予約推薦、商品マスタのAI自動入力。'],
+        ['Internal: bilingual RAG chatbot over 450+ pages, YOLO 11 detection, PDF reconciliation.', '社内: 450ページ超の日英RAGチャットボット、YOLO 11検出、PDF照合ツール。'],
         ['See projects.html for details and public code links.', '詳細と公開コードは projects.html をご覧ください。']
+      ]),
+      experience: () => this.lines([
+        ['2024-10 — now  Generative AI Engineer, SY System Co., Ltd. · Tokyo', '2024年10月〜現在  生成AIエンジニア、株式会社エスワイシステム · 東京'],
+        ['2023-12 — 2024-10  SQA Freelancer, Tester Work', '2023年12月〜2024年10月  SQAフリーランサー、Tester Work'],
+        ['2023-05 — 2024-10  Game Tester (contract), CrusherslabQA', '2023年5月〜2024年10月  ゲームテスター（契約）、CrusherslabQA'],
+        ['2022-10 — 2023-05  Manual SQA Engineer (intern), Scientistx Technology', '2022年10月〜2023年5月  マニュアルSQAエンジニア（インターン）、Scientistx Technology']
+      ]),
+      languages: () => this.lines([
+        ['Bengali   native', 'ベンガル語   母語'],
+        ['English   fluent, professional working proficiency', '英語   流暢（ビジネスレベル）'],
+        ['Japanese  basic, around JLPT N5 — used daily at work, studying for N3', '日本語   基礎レベル（JLPT N5程度）— 業務で日常的に使用、N3を勉強中'],
+        ['Hindi / Urdu  conversational', 'ヒンディー語・ウルドゥー語   日常会話レベル']
       ]),
       contact: () => this.lines([
         'Email: nafisiqbalvw@gmail.com',

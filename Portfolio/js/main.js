@@ -145,23 +145,38 @@ class PortfolioApp {
   animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
     
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const render = (element, value) => {
+      const prefix = element.getAttribute('data-prefix') || '';
+      const suffix = element.getAttribute('data-suffix') || '';
+      element.textContent = `${prefix}${value}${suffix}`;
+    };
+
     const animateNumber = (element) => {
       const target = Number(element.getAttribute('data-count'));
       if (!Number.isFinite(target)) return;
-      const prefix = element.getAttribute('data-prefix') || '';
-      const suffix = element.getAttribute('data-suffix') || '';
-      const duration = 2000;
-      const increment = target / (duration / 16);
-      let current = 0;
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        element.textContent = `${prefix}${Math.floor(current)}${suffix}`;
-      }, 16);
+
+      // Small targets spend most of a count-up showing a wrong number
+      // (a "2" reads as "0"), so render those straight away.
+      if (reduceMotion || target <= 10) {
+        render(element, target);
+        return;
+      }
+
+      // requestAnimationFrame rather than setInterval: frame-synced, and it
+      // does not drift when several counters run at once.
+      const duration = 1400;
+      const start = performance.now();
+
+      const step = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        render(element, Math.round(target * eased));
+        if (progress < 1) requestAnimationFrame(step);
+      };
+
+      requestAnimationFrame(step);
     };
 
     // Animate when elements come into view
